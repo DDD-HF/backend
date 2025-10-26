@@ -14,7 +14,7 @@ public class UpdateMemberService implements UpdateMemberUseCase {
     private final MemberRepository memberRepository;
 
     @Override
-    public Member update(MemberCommand.Update command) {
+    public Member execute(MemberCommand.Update command) {
         Member member = memberRepository.findById(command.toId());
         if (member == null) {
             throw new IllegalArgumentException("Member not found");

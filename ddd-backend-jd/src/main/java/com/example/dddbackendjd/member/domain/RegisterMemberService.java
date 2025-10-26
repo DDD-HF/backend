@@ -13,7 +13,7 @@ public class RegisterMemberService implements RegisterMemberUseCase {
     private final MemberRepository memberRepository;
 
     @Override
-    public Member register(MemberCommand.Register command) {
+    public Member execute(MemberCommand.Register command) {
         Member newMember = command.toDomain();
         return memberRepository.save(newMember);
     }

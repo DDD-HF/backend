@@ -5,5 +5,5 @@ import com.example.dddbackendjd.member.domain.api.dto.MemberCommand;
 
 public interface UpdateMemberUseCase {
 
-    Member update(MemberCommand.Update command);
+    Member execute(MemberCommand.Update command);
 }

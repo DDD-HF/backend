@@ -5,7 +5,7 @@ import lombok.Builder;
 
 @Builder(toBuilder = true)
 public record Member(
-        MemberId id,
+        MemberId memberId,
         String status,
         String name,
         String memberNumber,
