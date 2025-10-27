@@ -8,7 +8,8 @@ import org.springframework.context.annotation.FilterType;
 @Configuration
 @ComponentScan(
         basePackages = {
-                "com.example.dddbackendjd.member.domain"
+                "com.example.dddbackendjd.member.domain",
+                "com.example.dddbackendjd.test.domain"
         },
         includeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION, classes = {DomainService.class})}
 )

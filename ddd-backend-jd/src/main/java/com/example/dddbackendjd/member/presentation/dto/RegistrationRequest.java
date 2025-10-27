@@ -1,4 +1,4 @@
-package com.example.dddbackendjd.member.presentation.model;
+package com.example.dddbackendjd.member.presentation.dto;
 
 public record RegistrationRequest(
         RegisterMemberRequest member,

@@ -1,7 +1,7 @@
 package com.example.dddbackendjd.member.presentation.controller;
 
 import com.example.dddbackendjd.member.application.MemberApplicationService;
-import com.example.dddbackendjd.member.presentation.model.RegistrationRequest;
+import com.example.dddbackendjd.member.presentation.dto.RegistrationRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

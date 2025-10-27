@@ -2,7 +2,7 @@ package com.example.dddbackendjd.member.application.mapper;
 
 import com.example.dddbackendjd.common.configuration.MapStructConfig;
 import com.example.dddbackendjd.member.domain.api.dto.ProofCommand;
-import com.example.dddbackendjd.member.presentation.model.RegisterProofRequest;
+import com.example.dddbackendjd.member.presentation.dto.RegisterProofRequest;
 import org.mapstruct.Mapper;
 
 @Mapper(config = MapStructConfig.class)

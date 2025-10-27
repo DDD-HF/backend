@@ -2,8 +2,8 @@ package com.example.dddbackendjd.member.domain;
 
 import com.example.dddbackendjd.common.annotation.DomainService;
 import com.example.dddbackendjd.member.domain.api.QueryMemberUseCase;
-import com.example.dddbackendjd.member.domain.api.RegisterMemberUseCase;
-import com.example.dddbackendjd.member.domain.api.dto.MemberCommand;
+import com.example.dddbackendjd.member.domain.model.Member;
+import com.example.dddbackendjd.member.domain.model.MemberId;
 import com.example.dddbackendjd.member.domain.spi.MemberRepository;
 import lombok.RequiredArgsConstructor;
 

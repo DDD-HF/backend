@@ -1,11 +1,8 @@
 package com.example.dddbackendjd.member.application.mapper;
 
 import com.example.dddbackendjd.common.configuration.MapStructConfig;
-import com.example.dddbackendjd.member.domain.Member;
 import com.example.dddbackendjd.member.domain.api.dto.MemberCommand;
-import com.example.dddbackendjd.member.domain.api.dto.PaymentMethodCommand;
-import com.example.dddbackendjd.member.presentation.model.RegisterMemberRequest;
-import com.example.dddbackendjd.member.presentation.model.RegisterPaymentMethodRequest;
+import com.example.dddbackendjd.member.presentation.dto.RegisterMemberRequest;
 import org.mapstruct.Mapper;
 
 @Mapper(config = MapStructConfig.class)

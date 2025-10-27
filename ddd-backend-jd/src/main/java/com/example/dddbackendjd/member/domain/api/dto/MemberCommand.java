@@ -1,7 +1,7 @@
 package com.example.dddbackendjd.member.domain.api.dto;
 
-import com.example.dddbackendjd.member.domain.Member;
-import com.example.dddbackendjd.member.domain.MemberId;
+import com.example.dddbackendjd.member.domain.model.Member;
+import com.example.dddbackendjd.member.domain.model.MemberId;
 
 public record MemberCommand() {
 
