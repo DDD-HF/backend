@@ -1,0 +1,56 @@
+@host = http://localhost:3000
+
+### 사용자 생성 API
+POST {{host}}/api/v1/members/registration
+Content-Type: application/json
+
+{
+  "member": {
+    "status": "ACTIVE",
+    "name": "홍길동",
+    "memberNumber": "M-20250001",
+    "email": "hong.gildong@example.com",
+    "zipCode": "06164",
+    "address": "서울특별시 강남구 테헤란로 123",
+    "detailedAddress": "역삼동, 10층",
+    "mobileNumber": "010-1234-5678",
+    "landlineNumber": "02-9876-5432",
+    "registrationDate": "2025-11-03",
+    "isSmsSendingAllowed": true,
+    "memo": "신규 우수 고객 등록"
+  },
+  "paymentMethod": {
+    "paymentMethodType": "CMS",
+    "cms": {
+      "bankName": "국민은행",
+      "accountNumber": "1234567890123",
+      "accountHolderName": "홍길동",
+      "accountHolderType": "PERSONAL",
+      "dateOfBirth": "19901020",
+      "businessRegistrationNumber": null,
+      "consentInformation": "동의 완료 (2025-11-03)"
+    },
+    "rcms": null,
+    "card": null,
+    "mobile": null,
+    "virtualAccount": null
+  },
+  "proof": {
+    "proofType": "세금계산서",
+    "cashReceipt": null,
+    "taxInvoice": {
+      "memberType": "BUSINESS",
+      "taxType": "GENERAL",
+      "registrationNumber": "123-45-67890",
+      "tradeName": "주식회사 ABC솔루션",
+      "representativeName": "김철수",
+      "itemName": "IT 서비스 이용료",
+      "issuanceType": "EMAIL",
+      "issuanceMethod": "자동 발행"
+    }
+  }
+}
+
+### 사용자 정보 조회 API
+GET {{host}}/api/v1/members
+Content-Type: application/json

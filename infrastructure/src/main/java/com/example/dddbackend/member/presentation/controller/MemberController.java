@@ -3,6 +3,7 @@ package com.example.dddbackend.member.presentation.controller;
 import com.example.dddbackend.member.application.MemberApplicationService;
 import com.example.dddbackend.member.presentation.dto.RegistrationRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Profile;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,6 +16,7 @@ import java.net.URI;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/members")
+@Profile("real")
 public class MemberController {
 
     private final MemberApplicationService memberApplicationService;

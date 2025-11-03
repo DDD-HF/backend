@@ -1,3 +1,9 @@
 spring:
   application:
     name: ddd-backend
+  profiles:
+    active: mock
+
+server:
+  port: 3000
+
