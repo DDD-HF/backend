@@ -15,8 +15,4 @@ public class QueryMemberService implements QueryMemberUseCase {
         this.memberRepository = memberRepository;
     }
 
-    @Override
-    public Member findById(String id) {
-        return memberRepository.findById(new MemberId(id));
-    }
 }

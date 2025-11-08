@@ -3,18 +3,22 @@ package com.example.domain.member.api.dto;
 import com.example.domain.member.enums.AccountHolderType;
 import com.example.domain.member.enums.CardHolderType;
 import com.example.domain.member.enums.PaymentMethodType;
+import com.example.domain.member.model.MemberId;
 
 import java.util.Objects;
 
 public record PaymentMethodCommand() {
 
     public record Register(
+            MemberId memberId,
             PaymentMethodType paymentMethodType,
+            boolean isRecurringPaymentAgreed,
             Cms cms,
             Rcms rcms,
             Card card,
             Mobile mobile,
-            VirtualAccount virtualAccount
+            VirtualAccount virtualAccount,
+            PayerPayment payerPayment
     ) {
 
         public Register {
@@ -25,6 +29,7 @@ public record PaymentMethodCommand() {
                 case 카드 -> Objects.requireNonNull(card, "card must not be null");
                 case 휴대전화 -> Objects.requireNonNull(mobile, "mobile must not be null");
                 case 가상계좌 -> Objects.requireNonNull(virtualAccount, "virtualAccount must not be null");
+                case 납부자결제 -> Objects.requireNonNull(payerPayment, "payerPayment must not be null");
             }
         }
 
@@ -90,7 +95,8 @@ public record PaymentMethodCommand() {
                 Objects.requireNonNull(cardHolderType, "cardHolderType must not be null");
                 switch (cardHolderType) {
                     case 개인 -> Objects.requireNonNull(dateOfBirth, "dateOfBirth must not be null");
-                    case 법인 -> Objects.requireNonNull(businessRegistrationNumber, "businessRegistrationNumber must not be null");
+                    case 법인 ->
+                            Objects.requireNonNull(businessRegistrationNumber, "businessRegistrationNumber must not be null");
                 }
             }
         }
@@ -120,6 +126,13 @@ public record PaymentMethodCommand() {
                 Objects.requireNonNull(accountNumber, "accountNumber must not be null");
                 Objects.requireNonNull(accountHolderName, "accountHolderName must not be null");
             }
+        }
+
+        public record PayerPayment(
+                boolean isCardEnabled,
+                boolean isAccountEnabled,
+                boolean isSimplePaymentEnabled
+        ) {
         }
     }
 }

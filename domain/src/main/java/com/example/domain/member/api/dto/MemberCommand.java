@@ -3,6 +3,8 @@ package com.example.domain.member.api.dto;
 import com.example.domain.member.model.Member;
 import com.example.domain.member.model.MemberId;
 
+import java.util.Objects;
+
 public record MemberCommand() {
 
     public record Register(
@@ -19,27 +21,17 @@ public record MemberCommand() {
             boolean isSmsSendingAllowed,
             String memo
     ) {
-        public Member toDomain() {
-            return new Member(
-                    null,
-                    status,
-                    name,
-                    memberNumber,
-                    email,
-                    zipCode,
-                    address,
-                    detailedAddress,
-                    mobileNumber,
-                    landlineNumber,
-                    registrationDate,
-                    isSmsSendingAllowed,
-                    memo
-            );
+        public Register {
+            Objects.requireNonNull(status, "status must not be null");
+            Objects.requireNonNull(name, "name must not be null");
+            Objects.requireNonNull(memberNumber, "memberNumber must not be null");
+            Objects.requireNonNull(mobileNumber, "mobileNumber must not be null");
+            Objects.requireNonNull(registrationDate, "registrationDate must not be null");
         }
     }
 
     public record Update(
-            String id,
+            MemberId memberId,
             String status,
             String name,
             String memberNumber,
@@ -53,17 +45,11 @@ public record MemberCommand() {
             boolean isSmsSendingAllowed,
             String memo
     ) {
-        public MemberId toId() {
-            return new MemberId(id);
-        }
     }
 
     public record Delete(
-            String memberId
+            MemberId memberId
     ) {
-        public MemberId toId() {
-            return new MemberId(memberId);
-        }
     }
 
 }

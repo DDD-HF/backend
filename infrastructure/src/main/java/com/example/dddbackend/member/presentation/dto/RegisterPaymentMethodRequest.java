@@ -2,11 +2,13 @@ package com.example.dddbackend.member.presentation.dto;
 
 public record RegisterPaymentMethodRequest(
         String paymentMethodType,
+        boolean isRecurringPaymentAgreed,
         Cms cms,
         Rcms rcms,
         Card card,
         Mobile mobile,
-        VirtualAccount virtualAccount
+        VirtualAccount virtualAccount,
+        PayerPayment payerPayment
 ) {
 
     public record Cms(
@@ -52,6 +54,13 @@ public record RegisterPaymentMethodRequest(
             String bankName,
             String accountNumber,
             String accountHolderName
+    ) {
+    }
+
+    public record PayerPayment(
+            boolean isCardEnabled,
+            boolean isAccountEnabled,
+            boolean isSimplePaymentEnabled
     ) {
     }
 }

@@ -1,5 +1,10 @@
 package com.example.domain.member.enums;
 
-public enum TaxType {
-    과세, 면세
+import java.util.logging.Logger;
+
+public enum TaxType implements Type {
+    과세, 면세;
+
+    private static final Logger log = Logger.getLogger(TaxType.class.getName());
+
 }

@@ -48,6 +48,7 @@ project(':infrastructure') {
         implementation 'org.springframework.boot:spring-boot-starter-web'
         implementation 'org.springframework.modulith:spring-modulith-starter-core'
         implementation 'org.springframework.modulith:spring-modulith-starter-jpa'
+        implementation 'io.hypersistence:hypersistence-tsid:2.1.4'
         implementation 'org.mapstruct:mapstruct:1.6.3'
 
         compileOnly 'org.projectlombok:lombok'

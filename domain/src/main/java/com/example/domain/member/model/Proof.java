@@ -1,4 +1,8 @@
 package com.example.domain.member.model;
 
-public record Proof() {
+public sealed interface Proof permits CashReceipt, TaxInvoice {
+
+    ProofId proofId();
+    MemberId memberId();
+    boolean isAutomatedIssuance();
 }

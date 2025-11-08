@@ -17,7 +17,5 @@ public class DeleteMemberService implements DeleteMemberUseCase {
 
     @Override
     public void execute(MemberCommand.Delete command) {
-        Member member = memberRepository.findById(command.toId());
-        memberRepository.delete(member);
     }
 }

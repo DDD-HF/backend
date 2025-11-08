@@ -2,8 +2,7 @@ spring:
   application:
     name: ddd-backend
   profiles:
-    active: mock
+    active: local
 
 server:
   port: 3000
-

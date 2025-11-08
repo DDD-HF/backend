@@ -2,12 +2,14 @@ package com.example.domain.member.api.dto;
 
 import com.example.domain.member.enums.ProofType;
 import com.example.domain.member.enums.TaxType;
+import com.example.domain.member.model.MemberId;
 
 import java.util.Objects;
 
 public record ProofCommand() {
 
     public record Register(
+            MemberId memberId,
             ProofType proofType,
             CashReceipt cashReceipt,
             TaxInvoice taxInvoice
@@ -32,14 +34,14 @@ public record ProofCommand() {
         }
 
         public record TaxInvoice(
+                boolean isAutomatedIssuance,
                 String memberType,
                 TaxType taxType,
                 String registrationNumber,
                 String tradeName,
                 String representativeName,
                 String itemName,
-                String issuanceType,
-                String issuanceMethod
+                String issuanceType
         ) {
             public TaxInvoice {
                 Objects.requireNonNull(memberType, "memberType must not be null");
@@ -49,7 +51,6 @@ public record ProofCommand() {
                 Objects.requireNonNull(representativeName, "representativeName must not be null");
                 Objects.requireNonNull(itemName, "itemName must not be null");
                 Objects.requireNonNull(issuanceType, "issuanceType must not be null");
-                Objects.requireNonNull(issuanceMethod, "issuanceMethod must not be null");
             }
         }
     }

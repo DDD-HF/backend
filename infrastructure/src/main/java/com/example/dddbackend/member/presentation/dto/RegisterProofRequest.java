@@ -13,6 +13,7 @@ public record RegisterProofRequest(
     }
 
     public record TaxInvoice(
+            boolean isAutomatedIssuance,
             String memberType,
             String taxType,
             String registrationNumber,

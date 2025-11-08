@@ -1,12 +1,6 @@
 package com.example.domain.member.model;
 
-import java.util.Objects;
-
 public record MemberId(
-        String id
+        long id
 ) {
-
-    public MemberId {
-        Objects.requireNonNull(id, "id must not be null");
-    }
 }

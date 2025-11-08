@@ -25,7 +25,7 @@ Content-Type: application/json
       "bankName": "국민은행",
       "accountNumber": "1234567890123",
       "accountHolderName": "홍길동",
-      "accountHolderType": "PERSONAL",
+      "accountHolderType": "개인",
       "dateOfBirth": "19901020",
       "businessRegistrationNumber": null,
       "consentInformation": "동의 완료 (2025-11-03)"
@@ -40,7 +40,7 @@ Content-Type: application/json
     "cashReceipt": null,
     "taxInvoice": {
       "memberType": "BUSINESS",
-      "taxType": "GENERAL",
+      "taxType": "과세",
       "registrationNumber": "123-45-67890",
       "tradeName": "주식회사 ABC솔루션",
       "representativeName": "김철수",
