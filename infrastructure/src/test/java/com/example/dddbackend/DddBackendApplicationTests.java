@@ -18,5 +18,4 @@ class DddBackendApplicationTests {
 
         new Documenter(am).writeDocumentation();
     }
-
 }
