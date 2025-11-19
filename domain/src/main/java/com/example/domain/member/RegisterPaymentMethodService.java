@@ -11,7 +11,7 @@ import com.example.domain.member.model.PaymentMethod;
 import com.example.domain.member.model.PaymentMethodId;
 import com.example.domain.member.model.Rcms;
 import com.example.domain.member.model.VirtualAccount;
-import com.example.domain.member.spi.IdGenerator;
+import com.example.domain.common.generator.IdGenerator;
 import com.example.domain.member.spi.PaymentMethodRepository;
 
 @DomainService

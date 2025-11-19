@@ -7,7 +7,7 @@ import com.example.domain.member.model.CashReceipt;
 import com.example.domain.member.model.Proof;
 import com.example.domain.member.model.ProofId;
 import com.example.domain.member.model.TaxInvoice;
-import com.example.domain.member.spi.IdGenerator;
+import com.example.domain.common.generator.IdGenerator;
 import com.example.domain.member.spi.ProofRepository;
 
 @DomainService

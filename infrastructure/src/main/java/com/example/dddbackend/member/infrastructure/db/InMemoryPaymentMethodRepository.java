@@ -32,4 +32,9 @@ public class InMemoryPaymentMethodRepository implements PaymentMethodRepository 
 
         return paymentMethod;
     }
+
+    @Override
+    public List<PaymentMethod> findById(MemberId id) {
+        return paymentMethods.getOrDefault(id, List.of());
+    }
 }

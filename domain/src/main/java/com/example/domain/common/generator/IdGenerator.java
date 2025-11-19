@@ -1,4 +1,4 @@
-package com.example.domain.member.spi;
+package com.example.domain.common.generator;
 
 public interface IdGenerator {
     long generateId();

@@ -5,7 +5,7 @@ import com.example.domain.member.api.RegisterMemberUseCase;
 import com.example.domain.member.api.dto.MemberCommand;
 import com.example.domain.member.model.Member;
 import com.example.domain.member.model.MemberId;
-import com.example.domain.member.spi.IdGenerator;
+import com.example.domain.common.generator.IdGenerator;
 import com.example.domain.member.spi.MemberRepository;
 
 @DomainService

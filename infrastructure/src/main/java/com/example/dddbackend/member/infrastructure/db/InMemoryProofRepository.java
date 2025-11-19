@@ -30,4 +30,9 @@ public class InMemoryProofRepository implements ProofRepository {
 
         return proof;
     }
+
+    @Override
+    public List<Proof> findById(MemberId id) {
+        return proofs.getOrDefault(id, List.of());
+    }
 }
