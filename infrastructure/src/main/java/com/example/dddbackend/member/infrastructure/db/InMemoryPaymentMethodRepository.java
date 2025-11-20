@@ -25,7 +25,6 @@ public class InMemoryPaymentMethodRepository implements PaymentMethodRepository 
         List<PaymentMethod> paymentMethodList = paymentMethods.get(paymentMethod.paymentMethodId());
         if (paymentMethodList == null) {
             paymentMethodList = new ArrayList<>();
-            paymentMethodList.add(paymentMethod);
         }
         paymentMethodList.add(paymentMethod);
         paymentMethods.put(paymentMethod.memberId(), paymentMethodList);

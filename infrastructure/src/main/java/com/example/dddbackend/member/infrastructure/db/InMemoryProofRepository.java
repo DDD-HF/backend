@@ -23,7 +23,6 @@ public class InMemoryProofRepository implements ProofRepository {
         List<Proof> proofList = proofs.get(proof.memberId());
         if (proofList == null) {
             proofList = new ArrayList<>();
-            proofList.add(proof);
         }
         proofList.add(proof);
         proofs.put(proof.memberId(), proofList);
