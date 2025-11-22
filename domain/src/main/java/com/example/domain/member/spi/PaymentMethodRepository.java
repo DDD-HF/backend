@@ -11,4 +11,6 @@ public interface PaymentMethodRepository {
 
     List<PaymentMethod> findById(MemberId id);
 
+    void delete(MemberId id);
+
 }

@@ -11,4 +11,6 @@ public interface ProofRepository {
 
     List<Proof> findById(MemberId id);
 
+    void delete(MemberId id);
+
 }

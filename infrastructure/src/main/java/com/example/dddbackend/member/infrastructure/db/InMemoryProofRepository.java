@@ -34,4 +34,9 @@ public class InMemoryProofRepository implements ProofRepository {
     public List<Proof> findById(MemberId id) {
         return proofs.getOrDefault(id, List.of());
     }
+
+    @Override
+    public void delete(MemberId id) {
+        proofs.remove(id);
+    }
 }

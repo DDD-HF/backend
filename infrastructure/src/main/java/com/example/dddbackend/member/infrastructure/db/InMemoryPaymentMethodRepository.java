@@ -36,4 +36,9 @@ public class InMemoryPaymentMethodRepository implements PaymentMethodRepository 
     public List<PaymentMethod> findById(MemberId id) {
         return paymentMethods.getOrDefault(id, List.of());
     }
+
+    @Override
+    public void delete(MemberId id) {
+        paymentMethods.remove(id);
+    }
 }
